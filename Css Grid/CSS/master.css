@@ -1,0 +1,220 @@
+/* importeer Fira Sans van google */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+/* main css */
+html, body, h3{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header{
+  padding: 2em;
+}
+/*----------------------------------------------*/
+/* het tips block */
+header, aside{
+ background-color: rgba(180, 220, 255, 0.5);
+}
+aside a{
+  text-decoration: none;
+  padding: 1em .3em;
+  display: block;
+}
+aside a:hover{
+  background-color: #47a;
+  padding: 1.2em;
+  color: #fff;
+}
+aside ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+aside h3{
+  background-color: #47a;
+  padding: 2em;
+  color: #fff;
+}
+/*----------------------------------------------*/
+/* Opmaak van de generale css */
+footer{
+  background-color: #333;
+  color: #eee;
+  padding: 2em;
+}
+h1, h3{
+  font-family: 'Fira Sans';
+}
+h1, .tagline{
+  color: #47a;
+}
+section{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;
+}
+section img{
+  max-width: 100%;
+}
+article{
+  padding: 1em;
+}
+/*----------------------------------------------*/
+/* css van classes */
+.nummer{
+  background-color: #47a;
+  color: #fff;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em;
+}
+.afb{
+  display: block;
+  background-image: url('../afbeeldingen/landschap-small.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.afb2{
+  display: block;
+  background-image: url('../afbeeldingen/landschap2.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+/*----------------------------------------------*/
+
+/* Validatie */
+#validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+    /* 27728, Bjørn Emmaneel. */
+}
+/*----------------------------------------------*/
+
+/* Media screen: tablet. */
+@media screen and (max-width: 810px){
+  /* main css */
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "kop kop"
+                         "t1 t2"
+                         "t3 t4"
+                         "t5 t6"
+                         "afb t6"
+                         "afb t7"
+                         "aside t8"
+                         "aside t9"
+                         "aside t10"
+                         "voet voet";
+  }
+  /*----------------------------------------------*/
+  /* Opmaak van de generale css */
+  header{
+    grid-area: kop;
+  }
+  h1{
+    font-size: 2em;
+  }
+  /*----------------------------------------------*/
+  /* Grid-area's */
+  .Bewust{grid-area: t1; }
+  .Verbind{grid-area: t2; }
+  .Levendiger{grid-area: t3; }
+  .Compositie{grid-area: t4; }
+  .Wisselaf{grid-area: t5; }
+  .afb{grid-area: afb; }
+  .Ingewikkeld{grid-area: t6; }
+  .Driedimensionaal{grid-area: t7; }
+  aside{grid-area: aside; }
+  .Witbalans{grid-area: t8; }
+  .Licht{grid-area: t9; }
+  .Iso{grid-area: t10; }
+  footer{grid-area: voet;}
+  /*----------------------------------------------*/
+}
+
+/* Media screen: Landscape. */
+@media screen and (min-width: 1000px) {
+  /* main css */
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "kop kop kop"
+                         "t1 t2 afb"
+                         "t3 t4 afb"
+                         "t5 t6 aside"
+                         "t7 t8 aside"
+                         "t9 t10 aside"
+                         "voet voet voet";
+  }
+  /*----------------------------------------------*/
+  /* Opmaak van de generale css */
+  header{
+    grid-area: kop;
+  }
+    /*----------------------------------------------*/
+  /* Grid-area's */
+  .Bewust{grid-area: t1; }
+  .Verbind{grid-area: t2; }
+  .Levendiger{grid-area: t3; }
+  .Compositie{grid-area: t4; }
+  .Wisselaf{grid-area: t5; }
+  .afb{grid-area: afb; }
+  .Ingewikkeld{grid-area: t6; }
+  .Driedimensionaal{grid-area: t7; }
+  aside{grid-area: aside; }
+  .Witbalans{grid-area: t8; }
+  .Licht{grid-area: t9; }
+  .Iso{grid-area: t10; }
+  footer{grid-area: voet;}
+  /*----------------------------------------------*/
+}
+
+/* 5 kolommen */
+@media screen and (min-width: 1200px){
+  /* main css */
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "kop kop kop kop kop"
+                         "t1 t1 t2 t2 afb"
+                         "t3 t3 t4 t4 afb"
+                         "t5 t5 t6 t6 afb2"
+                         "t7 t7 t8 t8 aside"
+                         "t9 t9 t10 t10 aside"
+                         "voet voet voet voet voet";
+  }
+  /*----------------------------------------------*/
+  /* classes */
+    .Licht{
+
+    }
+  /*----------------------------------------------*/
+  /* inbody css */
+    section img{
+      width: 50%;
+      height: 50%;
+      float: right;
+    }
+  /*----------------------------------------------*/
+  /* Grid-area's */
+  header{grid-area: kop; }
+  .Bewust{grid-area: t1; }
+  .Verbind{grid-area: t2; }
+  .Levendiger{grid-area: t3; }
+  .Compositie{grid-area: t4; }
+  .Wisselaf{grid-area: t5; }
+  .afb{grid-area: afb; }
+  .afb2{grid-area: afb2; }
+  .Ingewikkeld{grid-area: t6; }
+  .Driedimensionaal{grid-area: t7; }
+  aside{grid-area: aside; }
+  .Witbalans{grid-area: t8; }
+  .Licht{grid-area: t9; }
+  .Iso{grid-area: t10; }
+  footer{grid-area: voet;}
+  /*----------------------------------------------*/
+}
